@@ -104,6 +104,43 @@ ul {
   vertical-align: middle;
 }
 
+/* Employment History Timeline */
+#timeline {
+  position: relative;
+  margin: 2rem auto;
+  padding-left: 0;
+  max-width: 700px;
+}
+
+.job {
+  position: relative;
+  background: #fff;
+  border-left: 4px solid var(--aws-orange);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.job h4 {
+  margin-bottom: 0.3rem;
+  color: var(--harvard-crimson);
+}
+
+.job span {
+  font-weight: bold;
+  color: var(--mit-blue);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.job p {
+  margin: 0;
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
 blockquote {
   margin: 2rem auto;
   font-style: italic;
