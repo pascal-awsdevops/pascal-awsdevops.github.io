@@ -1,0 +1,158 @@
+/* ========== ROOT THEME VARIABLES ========== */
+:root {
+  --bg-light: #f5f7fa;
+  --bg-dark: #0d1117;
+  --text-light: #1a1a1a;
+  --text-dark: #f0f6fc;
+  --primary: #0073bb; /* AWS Blue */
+  --secondary: #a31f34; /* Harvard Crimson */
+  --accent: #f9a826; /* Cloud Tech Yellow */
+  --mit-gray: #8a8d8f;
+  --harvard-red: #9e1b32;
+  --aws-purple: #232f3e;
+
+  --card-light: #ffffff;
+  --card-dark: #161b22;
+  --hover-light: #e6f2fb;
+  --hover-dark: #1c2a38;
+
+  --font-main: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  --font-headline: 'Montserrat', 'Georgia', serif;
+}
+
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BODY ========== */
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========== HEADER ========== */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.headshot {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid var(--accent);
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* ========== CONTACT LINKS ========== */
+.contact a {
+  color: #fff;
+  background-color: var(--aws-purple);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  transition: background-color 0.3s ease;
+}
+.contact a:hover {
+  background-color: var(--accent);
+  color: #000;
+}
+
+/* ========== SECTIONS ========== */
+main section {
+  background-color: var(--card-light);
+  border-left: 6px solid var(--secondary);
+  margin: 1.5rem 0;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+main section:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timeline-item {
+  background-color: var(--hover-light);
+  padding: 1.2rem;
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.timeline-item:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  background-color: var(--aws-purple);
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background: linear-gradient(135deg, var(--secondary), var(--aws-purple));
+}
+body.dark-mode main section {
+  background-color: var(--card-dark);
+  border-color: var(--harvard-red);
+}
+body.dark-mode .timeline-item {
+  background-color: var(--hover-dark);
+}
+body.dark-mode .contact a {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .timeline-item {
+    font-size: 0.95rem;
+  }
+
+  main section {
+    padding: 1rem 1.5rem;
+  }
+
+  header {
+    padding: 1.5rem 0.75rem;
+  }
+}
